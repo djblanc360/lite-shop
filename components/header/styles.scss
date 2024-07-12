@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    h1 {
+      cursor: pointer;
+      margin: 0;
+    }
+  
+   a {
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
+    nav a {
+      margin-left: 20px;
+      cursor: pointer;
+    }
+    
+    
+    #cart-count {
+    }
+    
+
+  }
+  
+ 

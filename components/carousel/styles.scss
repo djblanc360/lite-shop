@@ -1,0 +1,31 @@
+
+  .carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    
+    .prev {
+      left: 10px;
+    }
+    
+    .next {
+      right: 10px;
+    }
+    
+  }
+  

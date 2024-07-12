@@ -1,0 +1,19 @@
+.collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.collection__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.collection__products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

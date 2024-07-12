@@ -1,0 +1,41 @@
+.product {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+  }
+
+  .media-grid {
+    width: 50%;
+
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .product-details {
+    flex: 1;
+    padding: 20px;
+
+    @media screen and (max-width: 640px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .main-image {
+    display: none;
+
+    @media screen and (max-width: 640px) {
+      display: block;
+      margin-bottom: 20px;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

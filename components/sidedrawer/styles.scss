@@ -1,0 +1,99 @@
+.sidedrawer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1001;
+  padding: 20px;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+}
+
+.cart-item {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+
+  .thumbnail {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .name {
+        font-weight: bold;
+      }
+
+      .remove {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: #000;
+      }
+    }
+
+    .category,
+    .price {
+      margin: 5px 0;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+
+      button.quantity {
+        background: none;
+        border: 1px solid #ccc;
+        padding: 0 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+button.close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
