@@ -68,6 +68,9 @@ The applicaton will automatically run on your browser at http://localhost:9000
 
 
 ## Future Updates
+
+* Include JSDoc
+
 * Finish creating the carousel component to allow for the use carousel sliders (ideally without the use of a framework)
 
 * Pass responsive media queries to carousel component
