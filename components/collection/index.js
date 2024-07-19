@@ -8,7 +8,7 @@ class Collection extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: 'open' })
-    this.collections = Collections.load()
+    this.collections = Collections.get()
   }
 
   static get observedAttributes() {

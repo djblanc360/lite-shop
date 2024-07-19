@@ -41,34 +41,4 @@ const products = [
     }
 ]
 
-// generate product properties
-const addProductProperties = (products) => {
-    return products.map((product, index) => {
-        const handle = product.name.toLowerCase().replace(/\s+/g, '-')
-        const url = `/products/${handle}`
-        return {
-            ...product,
-            id: index + 1,
-            handle: handle,
-            url: url,
-        }
-    })
-}
-
-const updatedProducts = addProductProperties(products)
-
-// organize products into collections by category and then by handle
-const initCollections = updatedProducts.reduce((acc, product) => {
-    const { category, handle } = product
-    const key = category.toLowerCase().replace(/\s+/g, '_')
-    if (!acc[key]) {
-        acc[key] = {}
-    }
-    acc[key][handle] = product
-    return acc
-}, {})
-
-const collections = window.collections || initCollections
-
-window.collections = collections
-export default collections
+export default products

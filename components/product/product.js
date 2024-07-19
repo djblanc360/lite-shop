@@ -2,14 +2,14 @@ import Collections from '../collection/collections.js'
 
 class Product {
     constructor() {
-      this.collections = Collections.load() || window.collections
+      this.collections = Collections.get()
     }
 
     get = (handle) => {
-      for (const category in collections) {
-        for (const key in collections[category]) {
-          if (collections[category][key].handle === handle) {
-            return collections[category][key]
+      for (const category in this.collections) {
+        for (const key in this.collections[category]) {
+          if (this.collections[category][key].handle === handle) {
+            return this.collections[category][key]
           }
         }
       }

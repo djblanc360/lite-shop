@@ -1,4 +1,8 @@
+import Collections from './collection/collections.js'
+
 const render = (app, page) => {
+    const collections = Collections.get()
+
     if (page === 'dashboard') {
       app.innerHTML = `
       <flex-layout>
@@ -13,11 +17,9 @@ const render = (app, page) => {
         <store-product></store-product>
       `
     } else {
-      const categories = Object.keys(window.collections).map(category => 
+      const categories = Object.keys(collections).map(category => 
         `<option value="${category}">${category.replace('_', ' ')}</option>`
       ).join('')
-
-
 
       app.innerHTML = `
       <flex-layout>
@@ -42,5 +44,4 @@ const render = (app, page) => {
     }
   }
   
-  export default render
-  
+export default render

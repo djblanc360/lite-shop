@@ -96,6 +96,8 @@ The applicaton will automatically run on your browser at http://localhost:9000
 
 * [@Daryl Blancaflor](djblanc360@gmail.com)
 
+* [@Fadi Wissa](fadi.wissa@gateb.com)
+
 ## Version History
 
 * 0.1
